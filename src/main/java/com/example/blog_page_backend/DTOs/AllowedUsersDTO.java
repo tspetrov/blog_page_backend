@@ -1,14 +1,17 @@
 package com.example.blog_page_backend.DTOs;
 
+
 public class AllowedUsersDTO {
     private Integer id;
     private String username;
     private String fullname;
+    private String password;
 
-    public AllowedUsersDTO(Integer id, String username, String fullname) {
+    public AllowedUsersDTO(Integer id, String username, String fullname, String password) {
         this.id = id;
         this.username = username;
         this.fullname = fullname;
+        this.password = password;
     }
 
     public Integer getId() {
@@ -41,6 +44,11 @@ public class AllowedUsersDTO {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", fullname='" + fullname + '\'' +
+                ", password='" + password + '\'' +
                 '}';
+    }
+
+    public String getPassword() {
+        return password;
     }
 }

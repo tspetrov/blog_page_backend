@@ -10,8 +10,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @SpringBootApplication
 public class BlogPageBackendApplication implements CommandLineRunner {
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
 
     public static void main(String[] args) {
         SpringApplication.run(BlogPageBackendApplication.class, args);
@@ -19,14 +17,6 @@ public class BlogPageBackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        String sql = "select * from blogging_app_user.allowed_users;";
 
-
-        System.out.println(jdbcTemplate.queryForObject(sql, new Object[]{}, (rs, rowNum) ->
-                new AllowedUsersDTO(
-                        rs.getInt("id"),
-                        rs.getString("username"),
-                        rs.getString("fullname")
-                )).toString());
     }
 }
