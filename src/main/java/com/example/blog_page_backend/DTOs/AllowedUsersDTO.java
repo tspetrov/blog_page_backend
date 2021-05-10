@@ -1,4 +1,4 @@
-package com.example.blog_page_backend.DBManager;
+package com.example.blog_page_backend.DTOs;
 
 public class AllowedUsersDTO {
     private Integer id;

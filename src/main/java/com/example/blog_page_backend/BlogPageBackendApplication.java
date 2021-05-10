@@ -1,6 +1,6 @@
 package com.example.blog_page_backend;
 
-import com.example.blog_page_backend.DBManager.AllowedUsersDTO;
+import com.example.blog_page_backend.DTOs.AllowedUsersDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
